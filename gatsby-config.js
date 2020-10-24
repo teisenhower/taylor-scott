@@ -5,6 +5,10 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Taylor Scott Photography',
+    navLinks: ['About', 'Pricing', 'Wedding', 'Blog', 'Contact'],
+  },
   /* Your site config here */
   plugins: [],
 }
