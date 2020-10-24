@@ -1,28 +1,23 @@
+@value med from '../assets/breakpoints.module.css';
 :root {
   font-size: 10px;
+  line-height: 1.6rem;
 }
-
 #main {
   margin: 2rem auto 0 auto;
   width: 90vw;
 }
 h1 {
-  text-align: left;
-  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
-@media (max-width: 2000px) {
-}
-@media (max-width: 1600px) {
-}
-@media (max-width: 1200px) {
-}
-@media (max-width: 768px) {
+@media (med) {
   h1 {
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  body {
-    line-height: 1.6rem;
+    position: absolute;
+    text-align: left;
+    font-size: 1.6rem;
   }
 }

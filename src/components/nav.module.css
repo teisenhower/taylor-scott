@@ -1,0 +1,29 @@
+@value med from '../assets/breakpoints.module.css';
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #f7f7f7;
+  width: 100vw;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.6rem;
+  text-align: right;
+}
+li {
+  font-size: 1.2rem;
+}
+
+@media (med) {
+  nav {
+    position: relative;
+    width: 100%;
+    background-color: unset;
+  }
+  li {
+    display: inline;
+    padding-left: 5.2rem;
+  }
+}

@@ -1,5 +1,6 @@
 import { useStaticQuery } from 'gatsby'
 import React from 'react'
+import style from './nav.module.css'
 
 export default function Nav() {
   const data = useStaticQuery(
@@ -14,14 +15,12 @@ export default function Nav() {
     `,
   )
   return (
-    <div>
-      <nav>
-        <ul>
-          {data.site.siteMetadata.navLinks.map(navItem => (
-            <li>{navItem}</li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        {data.site.siteMetadata.navLinks.map(navItem => (
+          <li>{navItem}</li>
+        ))}
+      </ul>
+    </nav>
   )
 }
