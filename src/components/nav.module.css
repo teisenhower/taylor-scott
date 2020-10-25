@@ -1,10 +1,15 @@
 @value med from '../assets/breakpoints.module.css';
+#hamburger:focus-visible {
+  text-decoration: none;
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+}
 nav {
   position: fixed;
   left: 0;
   bottom: 0;
   background-color: #f7f7f7;
   width: 100vw;
+  transition: all ease-in-out 0.25s;
 }
 ul {
   list-style: none;
@@ -15,9 +20,21 @@ ul {
 li {
   font-size: 1.2rem;
 }
-
+.hidden {
+  bottom: -100px;
+}
+#hamburger {
+  text-align: center;
+  display: block;
+  margin-left: 50px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: none;
+  outline: none;
+}
 @media (med) {
   nav {
+    top: 0;
     position: relative;
     width: 100%;
     background-color: unset;
@@ -25,5 +42,8 @@ li {
   li {
     display: inline;
     padding-left: 5.2rem;
+  }
+  #hamburger {
+    display: none;
   }
 }

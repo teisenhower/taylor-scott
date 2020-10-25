@@ -2,7 +2,13 @@
 
 ## [Unreleased]
 
-Add logic to hide and show the when on mobile
+- Make position of the `hidden` class dynamic instead of fixed. This way if links need added or removed, the `hidden` class will not need updated.
+
+## [0.0.2] 2020-10-25
+
+### Added
+
+- Feature to display or hide mobile nav bar
 
 ## [0.0.1] 2020-10-24
 
