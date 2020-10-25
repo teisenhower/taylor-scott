@@ -1,9 +1,10 @@
-import { useStaticQuery } from 'gatsby'
-import React, { useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import React, { useState, useEffect } from 'react'
 import style from './nav.module.css'
 
 export default function Nav() {
-  const [navState, setNavState] = useState(false)
+  const [navActive, setNavActive] = useState(false)
+  const [navPOS, setNavPOS] = useState()
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,21 +16,31 @@ export default function Nav() {
       }
     `,
   )
-  const toggleNav = () => {
-    setNavState(!navState)
+  const toggleNavActive = () => {
+    setNavActive(!navActive)
   }
+  useEffect(() => {
+    const overallNavHeight = document
+      .getElementById('nav')
+      .getBoundingClientRect().height
+    const hamburgerIconHeight = document
+      .querySelector('nav div')
+      .getBoundingClientRect().height
+    const POS = (overallNavHeight - hamburgerIconHeight) * -1
+    setNavPOS(POS)
+  }, [])
   return (
-    <nav className={navState ? '' : style.hidden}>
-      <div
-        role="button"
-        tabIndex="0"
-        id={style.hamburger}
-        onClick={toggleNav}
-        onKeyDown={toggleNav}
-      >
-        X
-      </div>
+    <nav id="nav" style={navActive ? { bottom: '0' } : { bottom: navPOS }}>
       <ul>
+        <div
+          role="button"
+          tabIndex="0"
+          id={style.hamburger}
+          onClick={toggleNavActive}
+          onKeyDown={toggleNavActive}
+        >
+          X
+        </div>
         {data.site.siteMetadata.navLinks.map(navItem => (
           <li key={navItem}>{navItem}</li>
         ))}

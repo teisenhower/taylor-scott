@@ -2,7 +2,18 @@
 
 ## [Unreleased]
 
-- Make position of the `hidden` class dynamic instead of fixed. This way if links need added or removed, the `hidden` class will not need updated.
+- Fix Nav "popping" at top of page during initial paint before its position has been calculated
+- Fix missing props validation errors returned from es-lint
+
+## [0.0.3] 2020-10-25
+
+### Changed
+
+- Position of hidden nav in mobile now dynamic based on the overall height of the nav. Links can be added or removed without requiring the hide/show logic or css to be updated. Using the [useEffect](https://reactjs.org/docs/hooks-effect.html) hook to calculate the positioning needed to hide the nav.
+
+  - Styling moved to inline styles vs CSS
+
+- [useState](https://reactjs.org/docs/hooks-state.html) variable names in [nav.js](src/components/nav.js) updated.
 
 ## [0.0.2] 2020-10-25
 

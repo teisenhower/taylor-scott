@@ -6,10 +6,11 @@
 nav {
   position: fixed;
   left: 0;
-  bottom: 0;
   background-color: #f7f7f7;
   width: 100vw;
   transition: all ease-in-out 0.25s;
+  display: grid;
+  justify-content: flex-end;
 }
 ul {
   list-style: none;
@@ -20,13 +21,11 @@ ul {
 li {
   font-size: 1.2rem;
 }
-.hidden {
-  bottom: -100px;
-}
 #hamburger {
+  float: right;
   text-align: center;
-  display: block;
-  margin-left: 50px;
+  margin: 0;
+  padding-bottom: 1.6rem;
   width: 1.6rem;
   height: 1.6rem;
   border: none;
