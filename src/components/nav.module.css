@@ -1,35 +1,33 @@
 @value med from '../assets/breakpoints.module.css';
-#hamburger:focus-visible {
-  text-decoration: none;
-  outline: 1px solid rgba(0, 0, 0, 0.5);
-}
 nav {
   position: fixed;
   left: 0;
   background-color: #f7f7f7;
   width: 100vw;
   transition: all ease-in-out 0.25s;
-  display: grid;
-  justify-content: flex-end;
+  animation: fadein 1s;
 }
 ul {
   list-style: none;
   padding: 0;
   margin: 1.6rem;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 li {
   font-size: 1.2rem;
 }
 #hamburger {
-  float: right;
-  text-align: center;
-  margin: 0;
   padding-bottom: 1.6rem;
   width: 1.6rem;
-  height: 1.6rem;
   border: none;
   outline: none;
+}
+#hamburger:focus-visible {
+  text-decoration: none;
+  outline: 1px solid rgba(0, 0, 0, 0.5);
 }
 @media (med) {
   nav {
@@ -37,6 +35,11 @@ li {
     position: relative;
     width: 100%;
     background-color: unset;
+    animation: none;
+  }
+  ul {
+    display: block;
+    margin: 0;
   }
   li {
     display: inline;
@@ -44,5 +47,14 @@ li {
   }
   #hamburger {
     display: none;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
