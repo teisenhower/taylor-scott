@@ -2,8 +2,16 @@
 
 ## [Unreleased]
 
-- Fix Nav "popping" at top of page during initial paint before its position has been calculated
 - Fix missing props validation errors returned from es-lint
+- Start building header image
+
+## [0.0.4] 2020-10-29
+
+### Fixed
+
+- Fixed Nav pop at top of page during load by adding a simply css opacity transition. Will implement a better solution later.
+
+- When switching from desktop or a wide landscape on mobile to portrait view on mobile, the Nav height was not being set correctly resulting in the Nav hide/show to not work properly. To resolve this I added a new state property, `windowOrientation` to contain the screen orientation; _0 or 90 degrees_. The useEffect hook that sets the `navPOS` has been update to only fire when this state value has changed. I am updating the `windowOrientation` state with the [onorientationchange](https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event) event.
 
 ## [0.0.3] 2020-10-25
 

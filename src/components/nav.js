@@ -5,6 +5,7 @@ import style from './nav.module.css'
 export default function Nav() {
   const [navActive, setNavActive] = useState(false)
   const [navPOS, setNavPOS] = useState()
+  const [windowOrientation, setWindowOrientation] = useState()
   const data = useStaticQuery(
     graphql`
       query {
@@ -19,6 +20,11 @@ export default function Nav() {
   const toggleNavActive = () => {
     setNavActive(!navActive)
   }
+  window.onorientationchange = e => {
+    setTimeout(() => {
+      setWindowOrientation(e.target.screen.orientation.angle)
+    }, 100)
+  }
   useEffect(() => {
     const overallNavHeight = document
       .getElementById('nav')
@@ -28,7 +34,7 @@ export default function Nav() {
       .getBoundingClientRect().height
     const POS = (overallNavHeight - hamburgerIconHeight) * -1
     setNavPOS(POS)
-  }, [])
+  }, [windowOrientation])
   return (
     <nav id="nav" style={navActive ? { bottom: '0' } : { bottom: navPOS }}>
       <ul>
