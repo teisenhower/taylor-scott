@@ -2,10 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import React, { useState, useEffect } from 'react'
 import style from './nav.module.css'
 
-export default function Nav() {
-  const [navActive, setNavActive] = useState(false)
-  const [navPOS, setNavPOS] = useState()
-  const [windowOrientation, setWindowOrientation] = useState()
+export const Nav = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -17,6 +14,14 @@ export default function Nav() {
       }
     `,
   )
+  return <NavComponent data={data} />
+}
+
+export const NavComponent = ({ data }) => {
+  const [navActive, setNavActive] = useState(false)
+  const [navPOS, setNavPOS] = useState()
+  const [windowOrientation, setWindowOrientation] = useState()
+
   const toggleNavActive = () => {
     setNavActive(!navActive)
   }
@@ -54,3 +59,5 @@ export default function Nav() {
     </nav>
   )
 }
+
+export default Nav

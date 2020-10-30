@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  id="nav"
+  style={
+    Object {
+      "bottom": undefined,
+    }
+  }
+>
+  <ul>
+    <div
+      id="hamburger"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      X
+    </div>
+    <li>
+      About
+    </li>
+    <li>
+      Pricing
+    </li>
+    <li>
+      Wedding
+    </li>
+    <li>
+      Blog
+    </li>
+    <li>
+      Contact
+    </li>
+  </ul>
+</nav>
+`;
