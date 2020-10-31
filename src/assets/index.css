@@ -1,0 +1,12 @@
+@value med from '../assets/breakpoints.module.css';
+.siteTitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (med) {
+  .siteTitle {
+    font-size: 1.6rem;
+  }
+}

@@ -10,5 +10,15 @@ module.exports = {
     navLinks: ['About', 'Pricing', 'Wedding', 'Blog', 'Contact'],
   },
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+  ],
 }

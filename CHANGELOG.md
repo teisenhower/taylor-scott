@@ -3,7 +3,25 @@
 ## [Unreleased]
 
 - Fix missing props validation errors returned from es-lint
-- Start building header image
+- Look into adding tests for user nav interaction (hide/show)
+
+## [0.0.5] 2020-10-31
+
+### Added
+
+- Header Image underneath site title and nav
+- Snapshot test for Header Image [headerImage.test.js](src/__tests__/headerImage.test.js)
+- New Packages
+  - [gatsby-image](https://www.npmjs.com/package/gatsby-image)
+  - [gatsby-plugin-sharp](https://www.npmjs.com/package/gatsby-plugin-sharp)
+  - [gatsby-source-filesystem](https://www.npmjs.com/package/gatsby-source-filesystem)
+  - [gatsby-transformer-sharp](https://www.npmjs.com/package/gatsby-transformer-sharp)
+- [node.js.yml](.github/workflows/node.js.yml)
+
+### Changed
+
+- New rules added to [.eslintrc.json](src/.eslintrc.json)
+- CSS tweaks
 
 ## [0.0.4] 2020-10-29
 

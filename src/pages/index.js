@@ -3,11 +3,13 @@ import { graphql } from 'gatsby'
 import '../assets/index.css'
 import Layout from '../layouts/layout'
 import Nav from '../components/nav'
+import HeaderImage from '../components/headerImage'
 
 const App = ({ data }) => (
   <Layout>
-    <h1>{data.site.siteMetadata.title}</h1>
+    <h1 className="siteTitle">{data.site.siteMetadata.title}</h1>
     <Nav />
+    <HeaderImage />
   </Layout>
 )
 export default App
