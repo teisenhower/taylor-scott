@@ -2,8 +2,20 @@
 
 ## [Unreleased]
 
+- Snapshot test for Welcome Message
 - Fix missing props validation errors returned from es-lint
 - Look into adding tests for user nav interaction (hide/show)
+
+## [0.0.6] 2020-11-04
+
+### Added
+
+- Welcome Message component - [welcome.js](src/components/welcome.js)
+
+### Changed
+
+- CSS defaults for `h1`, `h2`, and `p` overwritten
+- Syntax updates to fix .eslint warnings/errors
 
 ## [0.0.5] 2020-10-31
 

@@ -1,4 +1,13 @@
 @value med from '../assets/breakpoints.module.css';
+:root {
+  --gold: #ffcf42;
+}
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
 .siteTitle {
   margin: 0;
   padding: 0;

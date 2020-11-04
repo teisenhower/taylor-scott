@@ -18,15 +18,13 @@ export const HeaderImage = () => {
   return <HeaderImg data={data} />
 }
 
-export const HeaderImg = ({ data }) => {
-  return (
-    <div>
-      <Img
-        className={style.headerImage}
-        fluid={data.fixedImage.childImageSharp.fluid}
-      />
-    </div>
-  )
-}
+export const HeaderImg = ({ data }) => (
+  <div>
+    <Img
+      className={style.headerImage}
+      fluid={data.fixedImage.childImageSharp.fluid}
+    />
+  </div>
+)
 
 export default HeaderImage

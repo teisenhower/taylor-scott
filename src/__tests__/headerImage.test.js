@@ -1,5 +1,4 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import renderer from 'react-test-renderer'
 import { HeaderImg } from '../components/headerImage'
 
