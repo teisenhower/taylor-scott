@@ -6,6 +6,17 @@
 - Fix missing props validation errors returned from es-lint
 - Look into adding tests for user nav interaction (hide/show)
 
+## [0.0.7] 2020-11-11
+
+### Added
+
+- Featured Session component - [featured.js](src/components/featured.js)
+
+### Changed
+
+- layout.js replaced with wrapper.js for naming purposes
+- component are now contained within a new [internalLayout.js](src/layouts/internalLayout.js). This layout ensures padding and margin is consistent between components that need to share these traits. Other subsequent css changes needed to happen in order for this to work correctly
+
 ## [0.0.6] 2020-11-04
 
 ### Added

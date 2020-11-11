@@ -30,6 +30,8 @@ I used [Figma](https://www.figma.com/) to build out the basic design. If you're 
 
 Interested in contributing, learning or just want to tinker around? Here is how you can clone and run this site locally.
 
+> You'll need Git, npm, Node.js and the Gatsby CLI installed. You can follow [this](https://www.gatsbyjs.com/tutorial/part-zero/) guide if you need to install any of these dependencies.
+
 ```
 # Clone repo
 git clone git@github.com:teisenhower/taylor-scott.git

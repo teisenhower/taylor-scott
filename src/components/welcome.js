@@ -1,8 +1,9 @@
 import React from 'react'
 import style from './welcome.module.css'
+import InternalLayout from '../layouts/internalLayout'
 
 export const Welcome = () => (
-  <div className={style.welcome}>
+  <InternalLayout id={style.welcome}>
     <h2>Hello &amp; Welcome</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel magnam quia
@@ -14,7 +15,7 @@ export const Welcome = () => (
       modi! Laudantium reiciendis, facilis corporis delectus recusandae quidem
       eligendi nesciunt voluptatibus nemo, eius magnam incidunt!
     </p>
-  </div>
+  </InternalLayout>
 )
 
 export default Welcome

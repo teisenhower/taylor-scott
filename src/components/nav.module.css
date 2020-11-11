@@ -6,6 +6,7 @@ nav {
   width: 100vw;
   transition: all ease-in-out 0.25s;
   animation: fadein 1s;
+  z-index: 1000;
 }
 ul {
   list-style: none;
@@ -40,6 +41,7 @@ li {
   ul {
     display: block;
     margin: 0;
+    padding-right: 22rem;
   }
   li {
     display: inline;

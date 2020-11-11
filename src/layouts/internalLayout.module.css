@@ -1,0 +1,11 @@
+@value med from '../assets/breakpoints.module.css';
+.main {
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+@media (med) {
+  .main {
+    padding: 0 22rem;
+  }
+}

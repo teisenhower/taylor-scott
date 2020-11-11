@@ -1,0 +1,80 @@
+@value med from '../assets/breakpoints.module.css';
+
+#featured {
+  background: var(--grey);
+  display: grid;
+  align-items: center;
+}
+button {
+  padding: 0 3.2rem;
+  margin: 4rem 0 2.4rem 0;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  border: 2px solid var(--gold);
+  justify-self: center;
+}
+
+.featuredImages {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-areas:
+    'main main secondary secondary'
+    'main main subA subB'
+    'main main subA subB';
+}
+
+.main {
+  grid-area: main;
+}
+.secondary {
+  grid-area: secondary;
+}
+.subA {
+  grid-area: subA;
+}
+.subB {
+  grid-area: subB;
+}
+.description {
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(10px, max-content);
+}
+
+@media (med) {
+  #featured {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+      'header header'
+      'images description';
+  }
+  .section h3 {
+    grid-area: header;
+  }
+  .featuredImages {
+    padding-right: 2.4rem;
+    grid-area: images;
+  }
+  .description {
+    grid-area: description;
+  }
+  .description h4 {
+    align-self: start;
+    line-height: 1;
+    padding-top: 0;
+  }
+  .description p {
+    align-self: start;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+  .description button {
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    justify-self: flex-start;
+    align-self: flex-end;
+    margin-bottom: 0;
+  }
+}

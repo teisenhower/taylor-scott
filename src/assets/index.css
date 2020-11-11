@@ -1,12 +1,19 @@
 @value med from '../assets/breakpoints.module.css';
 :root {
   --gold: #ffcf42;
+  --grey: rgba(0, 0, 0, 5%);
 }
 h1,
 h2,
+h3,
+h4,
+body,
 p {
   margin: 0;
   padding: 0;
+}
+.upper {
+  text-transform: uppercase;
 }
 .siteTitle {
   margin: 0;
@@ -14,8 +21,24 @@ p {
   text-align: center;
   font-size: 1.2rem;
 }
+p {
+  line-height: 1.8rem;
+}
+
+.sectionHeader,
+section h4 {
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  padding: 1.6rem 0 0.8rem 0;
+}
 @media (med) {
+  .sectionHeader,
+  section h4 {
+    font-size: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
   .siteTitle {
+    padding-left: 22rem;
     font-size: 1.6rem;
   }
 }
