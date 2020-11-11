@@ -10,7 +10,9 @@ import { Featured } from '../components/featured'
 
 const App = ({ data }) => (
   <Wrapper>
-    <h1 className="siteTitle">{data.site.siteMetadata.title}</h1>
+    <h1 className="siteTitle">
+      Taylor Scott <span>Photography</span>
+    </h1>
     <Nav />
     <HeaderImage />
     <Welcome />
@@ -18,13 +20,3 @@ const App = ({ data }) => (
   </Wrapper>
 )
 export default App
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
