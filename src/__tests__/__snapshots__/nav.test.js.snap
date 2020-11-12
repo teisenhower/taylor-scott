@@ -2,6 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <nav
+  className=""
   id="nav"
   style={
     Object {
@@ -11,13 +12,16 @@ exports[`renders correctly 1`] = `
 >
   <ul>
     <div
-      id="hamburger"
+      className=""
+      id="menu"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
     >
-      X
+      <div
+        id="menu_button"
+      />
     </div>
     <li>
       About

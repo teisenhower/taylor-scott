@@ -6,6 +6,14 @@
 - Fix missing props validation errors returned from es-lint
 - Look into adding tests for user nav interaction (hide/show)
 
+## [0.0.8] 2020-11-12
+
+### Changed
+
+- GraphQL query used to pull Featured images update to include the images name so it can be used for the key and alt fields
+- Mobile nav now used a hamburger style icon for opening and closing the nav drawer. This additional required additional css changes in other files.
+  - This change also required the logic used to determine the open and closed position of the nav drawer to be updated. Since the box-sizing was changed to border-box, the calculated height needed to be adjusted accordingly.
+
 ## [0.0.7] 2020-11-11
 
 ### Added
@@ -16,6 +24,7 @@
 
 - layout.js replaced with wrapper.js for naming purposes
 - component are now contained within a new [internalLayout.js](src/layouts/internalLayout.js). This layout ensures padding and margin is consistent between components that need to share these traits. Other subsequent css changes needed to happen in order for this to work correctly
+- Fonts and additional styling updated
 
 ## [0.0.6] 2020-11-04
 

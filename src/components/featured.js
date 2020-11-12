@@ -14,6 +14,7 @@ export const Featured = () => {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
+          name
         }
       }
     }
@@ -29,6 +30,8 @@ export const FeaturedSection = ({ data }) => {
       <div className={style.featuredImages}>
         {images.map((image, index) => (
           <Img
+            alt={image.name}
+            key={image.name}
             className={style[imageGridNames[index]]}
             fluid={image.childImageSharp.fluid}
           />

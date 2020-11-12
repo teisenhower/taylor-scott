@@ -31,9 +31,7 @@ export const NavComponent = ({ data }) => {
     }, 100)
   }
   useEffect(() => {
-    const overallNavHeight = document
-      .getElementById('nav')
-      .getBoundingClientRect().height
+    const overallNavHeight = document.getElementById('nav').getBoundingClientRect().height - 25
     const hamburgerIconHeight = document
       .querySelector('nav div')
       .getBoundingClientRect().height
@@ -41,16 +39,21 @@ export const NavComponent = ({ data }) => {
     setNavPOS(POS)
   }, [windowOrientation])
   return (
-    <nav id="nav" style={navActive ? { bottom: '0' } : { bottom: navPOS }}>
+    <nav
+      id="nav"
+      className={navActive ? style.open : ''}
+      style={navActive ? { bottom: '0' } : { bottom: navPOS }}
+    >
       <ul>
         <div
           role="button"
           tabIndex="0"
-          id={style.hamburger}
+          id={style.menu}
+          className={navActive ? style.open : ''}
           onClick={toggleNavActive}
           onKeyDown={toggleNavActive}
         >
-          X
+          <div id={style.menu_button} />
         </div>
         {data.site.siteMetadata.navLinks.map(navItem => (
           <li key={navItem}>{navItem}</li>
