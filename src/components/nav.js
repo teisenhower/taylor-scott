@@ -25,13 +25,17 @@ export const NavComponent = ({ data }) => {
   const toggleNavActive = () => {
     setNavActive(!navActive)
   }
-  window.onorientationchange = e => {
-    setTimeout(() => {
-      setWindowOrientation(e.target.screen.orientation.angle)
-    }, 100)
+  if (typeof window !== 'undefined') {
+    window.onorientationchange = e => {
+      setTimeout(() => {
+        setWindowOrientation(e.target.screen.orientation.angle)
+      }, 100)
+    }
   }
+
   useEffect(() => {
-    const overallNavHeight = document.getElementById('nav').getBoundingClientRect().height - 25
+    const overallNavHeight =
+      document.getElementById('nav').getBoundingClientRect().height - 25
     const hamburgerIconHeight = document
       .querySelector('nav div')
       .getBoundingClientRect().height
